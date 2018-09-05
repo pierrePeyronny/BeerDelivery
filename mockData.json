@@ -1,0 +1,12 @@
+{
+    "containers" : [ {
+        "id": 1,
+        "currentTemperature": -6,
+        "beer": {
+            "name" : "Beer 1 (Pilsner)",
+            "lowTemperature" : -6,
+            "highTemperature" : -4
+        }
+      }
+    ]
+  }

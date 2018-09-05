@@ -1,0 +1,14 @@
+<div *ngIf="beer" class="row">
+  <div class="col-xs-12">
+      <h5>Beer {{beer.id}} <small>{{beer.name}}</small></h5>
+
+      <div class="transportInformations">
+          <u>Transport informations:</u>
+          <ul>
+            <li>Low temperature: {{beer.lowTemperature}}°C</li>
+            <li>high temperature: {{beer.highTemperature}}°C</li>
+          </ul>
+        </div>
+  </div>
+
+</div>
