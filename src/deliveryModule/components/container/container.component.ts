@@ -25,11 +25,16 @@ subscriptionDataLoaded: Subscription;
   ngOnInit() {
     this._container = new Container(this.inputContainer.id, this.inputContainer.currentTemperature, this.inputContainer.beer);
 
+    // Subscribe to the change of datas
     this.subscriptionDataLoaded = this.deliveryService.containersDatas$.subscribe(datas => {
       this.updateTemperatureContainer(datas);
     });
   }
 
+  /**
+   * Update the current temperature of the container and send alert if necessary
+   * @param updatedContainers 
+   */
   updateTemperatureContainer(updatedContainers: Container[]): void {
     const newDatacontainer: Container = updatedContainers.find(x => x.id === this._container.id);
 
@@ -39,6 +44,9 @@ subscriptionDataLoaded: Subscription;
     }
   }
 
+  /**
+   * send alert to the alertService if necessary
+   */
   alertTemperatureContainer(): void {
     if (this._container.checkOutOfRangeTemperature()) {
       this.alertService.addAlert(this._container.id);

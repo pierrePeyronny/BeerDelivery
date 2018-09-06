@@ -9,7 +9,7 @@ import { ContainerResolver } from './services';
 
 const routes: Routes = [
   {
-    path: 'delivery',
+    path: '',
     component: TruckComponent,
     resolve: {
      containers: ContainerResolver

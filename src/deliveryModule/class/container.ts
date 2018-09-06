@@ -18,7 +18,7 @@ export class Container {
     }
 
     /**
-     * Check if the current temperature is egal to the low or high temperature of the beer
+     * Check if the current temperature is equal to the lowest or highest temperature of the beer
      */
     checkLimitTemperature(): boolean {
       return this.beer.temperatureIsLimitOutOfRange(this.currentTemperature);

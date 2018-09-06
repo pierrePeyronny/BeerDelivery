@@ -1,13 +1,12 @@
 
   <div *ngIf="_container" class="col-xs-6 col-md-3 containerBloc" 
   [ngClass]="{'bg-success': true, 'bg-warning': this._container.checkLimitTemperature(), 'bg-danger': this._container.checkOutOfRangeTemperature()}">
-  <h4><u>Container number:</u> {{_container.id}}</h4> 
+    <h4><u>Container number:</u> {{_container.id}}</h4> 
 
-  <!-- Beer component -->
-  <delivery-beer [beer]="_container.beer"></delivery-beer>
+    <delivery-beer [beer]="_container.beer"></delivery-beer>
 
-  <!-- Current temperature -->
-  <div class="text-center">
+   <!-- Current temperature -->
+   <div class="text-center">
     <u>Current container temperature:</u>
     <p class="currentTemperature" [ngClass]="{'text-danger': this._container.checkOutOfRangeTemperature()}">{{_container.currentTemperature}}°C</p>
   </div>

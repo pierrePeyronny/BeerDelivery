@@ -3,7 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: '/delivery', pathMatch: 'full' },
-  { path: 'delivery', loadChildren: 'src/app/deliveryModule/delivery.module#DeliveryModule'}
+
+  /** lazy loading on the deliveryModule */
+  { path: 'delivery', loadChildren: 'src/deliveryModule/delivery.module#DeliveryModule'}
 ];
 
 @NgModule({

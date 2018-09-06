@@ -1,3 +1,4 @@
+
 export class Beer {
     id: number;
     name: string;
@@ -12,10 +13,18 @@ export class Beer {
       this.highTemperature = highTemperature;
     }
 
+    /**
+     * Check if the current temperature is egal to a range 
+     * @param currentTemperature 
+     */
     temperatureIsLimitOutOfRange(currentTemperature: number): boolean {
       return (currentTemperature === this.lowTemperature || currentTemperature === this.highTemperature);
     }
 
+    /**
+     * Check if the current temperature is out of range
+     * @param currentTemperature 
+     */
     temperatureIsOutOfRange(currentTemperature: number): boolean {
       return (currentTemperature < this.lowTemperature || currentTemperature > this.highTemperature);
     }

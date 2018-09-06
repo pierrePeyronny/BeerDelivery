@@ -1,27 +1,33 @@
-# PragmaBreweryApp
+# Run the project
+- npm install
+- ng serve
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
+# highlights logic and code writing style
+- I lazyloaded the deliveryModule to be ready for the application’s future, with other modules to keep it easy and faster to load.  
+- I followed Angular's style guide.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# What could have been done in a better way
+- Checking more the datas received
+- More Errors Handling
+- More Unit tests
+- Better design
 
-## Code scaffolding
+# Version 2.0
+- Update the truck and the containers to be able to manage the placement of each container in the truck depending on their temperatures.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Check the number of bottles remaining per container => not to give alerts on an empty container.
 
-## Build
+- Send email/SMS to the driver in case of a temperature problem
+- Better design !
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+# Question I had /answer
+- Do the driver have access to the app while driving => Yes, he will be able to see an alert on a screen available for him.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+# Other note
+- It was the first time I ever used Unit Tests on the frontend with angular, so there is probably some mistakes and maybe all the test cases aren't covered
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
